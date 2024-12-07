@@ -6,7 +6,18 @@
 		<title>Weather App</title>
 	</head>
 	<body>
-		<input type="text" name="location" id="location" />
-		<button>Get weather data</button>
+		<form>
+			<div class="row">
+				<label for="location">Enter location</label>
+				<input
+					type="text"
+					name="location"
+					id="location"
+					placeholder="London, UK"
+					required
+				/>
+			</div>
+			<button type="submit">Get weather data</button>
+		</form>
 	</body>
 </html>

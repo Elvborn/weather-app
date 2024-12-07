@@ -6,7 +6,85 @@
 		<title>Weather App</title>
 	</head>
 	<body>
-		<form>
+		<div id="weather-container">
+			<div id="todays-weather" class="transparent">
+				<div class="details">
+					<div class="header">
+						<h1 class="location">
+							Silkeborg, Midtjylland, Danmark
+						</h1>
+						<h3 class="timezone">Europa/Copenhagen</h3>
+						<h3 class="current-time">09:00:00</h3>
+					</div>
+					<p class="description">
+						Similar temperatures continuing with a chance of rain
+						tomorrow.
+					</p>
+					<div class="card-container">
+						<div class="card transparent">
+							<p>Sunrise</p>
+							<div class="divider"></div>
+							<img src="./img/svg/other/sunrise.svg" />
+							<p>07:00:00</p>
+						</div>
+
+						<div class="card transparent">
+							<p>Sunset</p>
+							<div class="divider"></div>
+							<img src="./img/svg/other/sunset.svg" />
+							<p>18:00:00</p>
+						</div>
+					</div>
+				</div>
+				<div id="graphics-container">
+					<div id="graphics" class="transparent">
+						<img
+							src="./img/svg/weather-icons/cloudy.svg"
+							width="50px"
+						/>
+						<div class="divider">
+							<p class="humitity">Hum: 95%</p>
+							<p class="uv-index">UV: 0</p>
+						</div>
+						<p class="temp">5</p>
+					</div>
+
+					<div id="graphics" class="transparent">
+						<img
+							class="wind-icon"
+							src="./img/svg/other/air.svg"
+							width="50px"
+						/>
+						<img
+							class="wind-arrow-icon"
+							src="./img/svg/other/arrow.svg"
+							width="50px"
+						/>
+						<div class="wind-speed">
+							<p>30</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div id="forecast">
+				<div class="card transparent">
+					<p>Today</p>
+					<div class="divider"></div>
+					<img src="./img/svg/weather-icons/clear-day.svg" />
+					<p class="temp">6</p>
+				</div>
+
+				<div class="card transparent">
+					<p>Today</p>
+					<div class="divider"></div>
+					<img src="./img/svg/weather-icons/clear-day.svg" />
+					<p class="temp">6</p>
+				</div>
+			</div>
+		</div>
+
+		<form class="transparent hide">
 			<div class="row">
 				<label for="location">Enter location</label>
 				<input

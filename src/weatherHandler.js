@@ -55,7 +55,7 @@ class Day {
 			snow: data.snow,
 			sunrise: data.sunrise,
 			sunset: data.sunset,
-			icon: `./src/img/svg/weather-icons/${data.icon}.svg`,
+			icon: `./img/${data.icon}.svg`,
 		};
 	}
 }
@@ -10503,7 +10503,8 @@ async function getDummy() {
 
 // Events
 PubSub.subscribe('REQUEST-WEATHER-UPDATE', (msg, location) => {
-	getDummy(); // Get real data in prod
+	//getDummy(); // Get real data in prod
+	requestWeatherData(location);
 });
 
 export { WeatherData };

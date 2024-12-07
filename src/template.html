@@ -6,8 +6,11 @@
 		<title>Weather App</title>
 	</head>
 	<body>
-		<div id="weather-container">
+		<div id="weather-container" class="hide">
 			<div id="todays-weather" class="transparent">
+				<button class="back">
+					<img src="./img/svg/other/back.svg" />
+				</button>
 				<div class="details">
 					<div class="header">
 						<h1 class="location">
@@ -21,35 +24,36 @@
 						tomorrow.
 					</p>
 					<div class="card-container">
-						<div class="card transparent">
+						<div class="card sunrise transparent">
 							<p>Sunrise</p>
 							<div class="divider"></div>
 							<img src="./img/svg/other/sunrise.svg" />
-							<p>07:00:00</p>
+							<p class="time">07:00:00</p>
 						</div>
 
-						<div class="card transparent">
+						<div class="card sunset transparent">
 							<p>Sunset</p>
 							<div class="divider"></div>
 							<img src="./img/svg/other/sunset.svg" />
-							<p>18:00:00</p>
+							<p class="time">18:00:00</p>
 						</div>
 					</div>
 				</div>
 				<div id="graphics-container">
-					<div id="graphics" class="transparent">
+					<div class="graphics weather transparent">
 						<img
+							class="weather-icon"
 							src="./img/svg/weather-icons/cloudy.svg"
 							width="50px"
 						/>
 						<div class="divider">
-							<p class="humitity">Hum: 95%</p>
+							<p class="humidity">Hum: 95%</p>
 							<p class="uv-index">UV: 0</p>
 						</div>
 						<p class="temp">5</p>
 					</div>
 
-					<div id="graphics" class="transparent">
+					<div class="graphics wind transparent">
 						<img
 							class="wind-icon"
 							src="./img/svg/other/air.svg"
@@ -84,7 +88,7 @@
 			</div>
 		</div>
 
-		<form class="transparent hide">
+		<form class="transparent">
 			<div class="row">
 				<label for="location">Enter location</label>
 				<input
@@ -97,5 +101,9 @@
 			</div>
 			<button type="submit">Get weather data</button>
 		</form>
+
+		<div id="loading" class="transparent hide">
+			<img src="./img/svg/other/loading.svg" />
+		</div>
 	</body>
 </html>

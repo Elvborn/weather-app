@@ -1,10 +1,9 @@
 import './styles.css';
-import { getWeatherData } from './weatherHandler';
+import { getDummy, getWeatherData } from './weatherHandler';
 
+const locationInput = document.querySelector('input');
 const btn = document.querySelector('button');
 
 btn.addEventListener('click', () => {
-	getWeatherData('silkeborg,denmark').then((data) => {
-		console.log(data);
-	});
+	console.log(getDummy());
 });

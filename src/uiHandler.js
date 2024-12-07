@@ -75,6 +75,8 @@ function updateGraphics(weatherData) {
 	arrow.style.rotate = `${weatherData.currentConditions.windDir}deg`;
 
 	windSpeedContainer.style.rotate = `${weatherData.currentConditions.windDir}deg`;
+
+	windSpeed.textContent = weatherData.currentConditions.windSpeed;
 	windSpeed.style.rotate = `-${weatherData.currentConditions.windDir}deg`;
 }
 
@@ -114,6 +116,7 @@ form.addEventListener('submit', (e) => {
 
 	const locationInput = form.querySelector('#location');
 	PubSub.publish('REQUEST-WEATHER-UPDATE', locationInput.value);
+	locationInput.value = '';
 });
 
 backBtn.addEventListener('click', () => {

@@ -48,7 +48,7 @@ class Day {
 			temp: Math.round(Number((data.temp - 32) / 1.8)),
 			feelsLike: Math.round(Number((data.feelslike - 32) / 1.8)),
 			humidity: data.humidity,
-			windSpeed: data.windspeed,
+			windSpeed: Math.round(data.windspeed),
 			windGust: data.windgust,
 			windDir: data.winddir,
 			uvIndex: data.uvindex,

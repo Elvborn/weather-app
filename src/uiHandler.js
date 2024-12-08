@@ -1,15 +1,10 @@
+/* eslint-disable no-undef */
 import PubSub from 'pubsub-js';
 
 const form = document.querySelector('form');
 const weatherContainer = document.querySelector('#weather-container');
 const loading = document.querySelector('#loading');
 const backBtn = document.querySelector('.back');
-
-function displayWeatherData(weatherData) {
-	showWeather();
-	updateDisplay(weatherData);
-	console.log(weatherData);
-}
 
 function showWeather() {
 	form.classList.add('hide');
@@ -108,10 +103,32 @@ function updateForecast(weatherData) {
 	});
 }
 
+function displayWeatherData(weatherData) {
+	showWeather();
+	updateDisplay(weatherData);
+}
+
+function displayError() {
+	const error = form.querySelector('.error');
+
+	form.classList.add('input-error');
+	error.classList.remove('hide');
+
+	showForm();
+}
+
+function clearError() {
+	const error = form.querySelector('.error');
+
+	form.classList.remove('input-error');
+	error.classList.add('hide');
+}
+
 // Events
 form.addEventListener('submit', (e) => {
 	e.preventDefault();
 
+	clearError();
 	showLoading();
 
 	const locationInput = form.querySelector('#location');
@@ -126,3 +143,5 @@ backBtn.addEventListener('click', () => {
 PubSub.subscribe('WEATHER-DATA-UPDATED', (msg, data) =>
 	displayWeatherData(data),
 );
+
+PubSub.subscribe('WEATHER-DATA-ERROR', () => displayError());

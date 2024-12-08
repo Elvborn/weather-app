@@ -67,7 +67,10 @@ async function requestWeatherData(location) {
 		mode: 'cors',
 	});
 
-	if (!response.ok) console.error('Failed to connect to API');
+	if (!response.ok) {
+		const error = `Failed api call: status code ${response.status}`;
+		PubSub.publish('WEATHER-DATA-ERROR', error);
+	}
 
 	PubSub.publish(
 		'WEATHER-DATA-UPDATED',

@@ -91,13 +91,19 @@
 		<form class="transparent">
 			<div class="row">
 				<label for="location">Enter location</label>
-				<input
-					type="text"
-					name="location"
-					id="location"
-					placeholder="London, UK"
-					required
-				/>
+				<div>
+					<input
+						type="text"
+						name="location"
+						id="location"
+						placeholder="London, UK"
+						required
+					/>
+					<p class="error hide">
+						Invalid input! <br /><br />
+						Please check if your spelling is correct
+					</p>
+				</div>
 			</div>
 			<button type="submit">Get weather data</button>
 		</form>

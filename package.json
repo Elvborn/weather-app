@@ -1,7 +1,7 @@
 {
-	"name": "webapp-template",
+	"name": "weather-app",
 	"version": "1.0.0",
-	"description": "This is a basic template for web app projects",
+	"description": "A basic weather app",
 	"main": "index.js",
 	"scripts": {
 		"build": "webpack --config webpack.prod.js",
@@ -9,14 +9,14 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+ssh://git@github.com/Elvborn/webapp-template.git"
+		"url": "https://github.com/Elvborn/weather-app.git"
 	},
 	"author": "Elvborn",
 	"license": "ISC",
 	"bugs": {
-		"url": "https://github.com/Elvborn/webapp-template/issues"
+		"url": "https://github.com/Elvborn/weather-app/issues"
 	},
-	"homepage": "https://github.com/Elvborn/webapp-template#readme",
+	"homepage": "https://github.com/Elvborn/weather-app#readme",
 	"devDependencies": {
 		"@eslint/eslintrc": "^3.2.0",
 		"css-loader": "^7.1.2",

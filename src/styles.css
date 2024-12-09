@@ -149,7 +149,7 @@ body {
 
 .graphics img {
 	filter: invert();
-	width: calc(var(--circle-size) / 2);
+	width: calc(var(--circle-size) / 3);
 }
 
 .divider {
